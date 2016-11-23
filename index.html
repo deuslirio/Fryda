@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Fryda Video Player</title>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="pages/styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+
+
+    <div class='content'>
+      <h1>Fryda - 360 Video Player</h1>
+          <br/>
+        <h2>1- Tenha certeza de estar usando o Firefox atualizado;</h2>
+        <br/>
+        <h2>2- Tenha um video360! para baixar um video360 do youtube acesse <a href="http://ssyoutube.com/">Esse link</a> </h2>
+        <br/>
+        <h3>3- Agora procure e selecione o arquivo do video, clique em confirmar e aproveite a Experiencia com seu Oculos de Realidade Virtual!<h3>
+    <br/>
+    <form id="videoSelection"action='' method='POST' enctype='multipart/form-data'>
+        <input type='file' id='file' name='file' class="inputfile" onchange="testFile()">
+        <label id="labelfile" for="file">Procurar video</label>
+        <input value="Confirmar" class="button" type="button" id="videourl" onclick="showVideo() "disabled>
+    </form>
+  </div>
+
+
+
+
+    <script>
+    document.getElementById("videoSelection").reset();
+    document.getElementById('videourl').disabled=true;
+
+      function testFile(){
+        var selectedFile = document.getElementById('file').files[0];
+        document.getElementById('labelfile').innerHTML=selectedFile.name;
+      document.getElementById('videourl').disabled=false;
+      }
+
+      function showVideo() {
+                var selectedFile = document.getElementById('file').files[0];
+
+                var objectURL = window.URL.createObjectURL(selectedFile);
+                window.location.href = "pages/showvd.html?url=" + objectURL;
+        }
+
+    </script>
+    <!--Start of Tawk.to Script-->
+
+    <!--End of Tawk.to Script-->
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Fryda Video Player</title>
+    <link type="text/css" rel="stylesheet" href="styles.css" />
+    <script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <a-scene id="vrContainer">
+
+        <a-videosphere src="" autoplay rotation="0 180 0"></a-videosphere>
+
+    </a-scene>
+
+    <script>
+        var query = location.search.slice(1);
+        var Args = {};
+
+        var chaveValor = query.split('=');
+        var chave = chaveValor[0];
+        var valor = chaveValor[1];
+        Args[chave] = valor;
+        var videourl = Args["url"];
+
+        var scene = document.querySelector('a-scene');
+        if (scene.hasLoaded) {
+            run();
+        } else {
+            scene.addEventListener('loaded', run);
+        }
+
+        function run() {
+            var video = scene.querySelector('a-videosphere');
+            // video.setAttribute(videourl, 'autoplay', '0 180 0');
+            video.setAttribute('src', videourl)
+        }
+    </script>
+</body>
+
+</html>

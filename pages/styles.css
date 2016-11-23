@@ -1,0 +1,91 @@
+html {
+    background: #424242;
+    font-family: 'Roboto', sans-serif;
+    align: center;
+    font-weight: normal;
+}
+
+h1{
+    color: white;
+    font-size: 40px;
+}
+h2, h3 {
+    color: white;
+font-size: 20px;
+text-decoration: none;
+font-weight: normal;
+
+}
+
+
+form{
+  text-align: center;
+}
+
+
+a {
+    color: #bbdefb;
+}
+
+.button {
+    background-color: #43a047;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+.button:hover {
+    background-color: #4caf50;
+    color: white;
+}
+.button:disabled {
+    background-color: #DDDDDD;
+    color: #999999;
+    cursor: auto;
+
+}
+
+.inputfile {
+    display: none
+}
+
+.inputfile+label {
+    background-color: #303f9f;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    text-decoration-style: solid
+}
+
+.inputfile:focus+label, .inputfile+label:hover {
+    background-color: #3949ab;
+    color: white;
+}
+
+.inputfile+label {
+    cursor: pointer;
+    /* "hand" cursor */
+}
+
+.content {
+  text-align: left;
+    position: relative;
+    top: 15%;
+    left: 15%;
+    border: 1px;
+    width: 70%;
+
+    padding: 20px;
+}
