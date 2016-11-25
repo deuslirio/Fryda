@@ -1,6 +1,6 @@
 var query = location.search.slice(1);
 var Args = {};
-
+console.log("oi")
 var chaveValor = query.split('=');
 var chave = chaveValor[0];
 var valor = chaveValor[1];
@@ -15,7 +15,8 @@ if (scene.hasLoaded) {
 }
 
 function run() {
-    var video = scene.querySelector('a-videosphere');
-    // video.setAttribute(videourl, 'autoplay', '0 180 0');
+    var video = scene.querySelector('video');
+
     video.setAttribute('src', videourl)
+
 }

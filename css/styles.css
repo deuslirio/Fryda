@@ -29,10 +29,10 @@ a {
 
 .button {
     background-color: #43a047;
-    /* Green */
+
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 15px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -61,7 +61,7 @@ a {
     background-color: #303f9f;
     border: none;
     font-family: 'Roboto', sans-serif;
-    padding: 15px 32px;
+    padding: 15px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -79,13 +79,15 @@ a {
     /* "hand" cursor */
 }
 
-.content {
-  text-align: left;
-    position: relative;
-    top: 15%;
-    left: 15%;
-    border: 1px;
-    width: 70%;
+.git_image{
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+}
 
-    padding: 20px;
+.loader{
+  z-index: -100;
+  width: 60px;
+  height: 60px;
+  position: absolute;
 }

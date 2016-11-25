@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Fryda Video Player</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link type="text/css" rel="stylesheet" href="css/styles.css" />
+    <script src="js/aframe.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+</head>
+
+<body>
+  <center><img class='loader'src="images/loader.gif"></img></center>
+
+
+        <a-scene id="vrContainer">
+            <a-assets>
+                <video id="video" autoplay loop="true" src="">
+      </a-assets>
+      <script src="js/showvd.js"></script>
+
+        <a-videosphere src="#video" autoplay preload=true rotation="0 180 0"></a-videosphere>
+
+    </a-scene>
+
+</body>
+
+</html>

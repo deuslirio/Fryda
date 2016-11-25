@@ -11,5 +11,5 @@ document.getElementById('videourl').disabled=true;
             var selectedFile = document.getElementById('file').files[0];
 
             var objectURL = window.URL.createObjectURL(selectedFile);
-            window.location.href = "pages/showvd.html?url=" + objectURL;
+            window.location.href = "showvd.html?url=" + objectURL;
     }
