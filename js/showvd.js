@@ -15,7 +15,7 @@ if (scene.hasLoaded) {
 }
 
 function run() {
-    var video = scene.querySelector('video');
+    var video = scene.querySelector('a-videosphere');
 
     video.setAttribute('src', videourl)
 
